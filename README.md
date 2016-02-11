@@ -52,7 +52,7 @@ The `function` accepts the following `options`:
 *	__sort__: method used to sort meta data. Can be one of `full_name`, `created`, `pushed`, or `updated`.
 *	__direction__: sort direction; either `asc` or `desc`.
 *	__visibility__: repository visibility. Can be one of `all`, `public`, or `private`. Applicable if provided a `token` and no `username`. Ignored if `type` option is present.
-*	__affiliation__: repository affiliation. A comma-separated list of values, which may include: `owner,collaborator,organization_member`. Applicable if provided a `token` and no `username`. Ignored if `type` option is present. 
+*	__affiliation__: repository affiliation. A comma-separated list of values, which may include: `owner`, `collaborator`, `organization_member`. Applicable if provided a `token` and no `username`. Ignored if `type` option is present. 
 *	__useragent__: [user agent][github-user-agent] `string`.
 
 To [authenticate][github-oauth2] with Github, set the [`token`][github-token] option.
