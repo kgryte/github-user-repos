@@ -87,6 +87,28 @@ var opts = {
 repos( opts, clbk );
 ```
 
+To return repositories of a particular [visibility][github-repos], set the `visibility` option.
+
+``` javascript
+var opts = {
+	'token': 'tkjorjk34ek3nj4!',
+	'visibility': 'private'
+};
+
+repos( opts, clbk );
+```
+
+To return repositories of a particular [affiliation][github-repos], set the `affiliation` option.
+
+``` javascript
+var opts = {
+	'token': 'tkjorjk34ek3nj4!',
+	'affiliation': 'collaborator,organization_member'
+};
+
+repos( opts, clbk );
+```
+
 
 #### repos.factory( options, clbk )
 
