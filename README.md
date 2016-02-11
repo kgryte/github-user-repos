@@ -48,11 +48,11 @@ function clbk( error, results, info ) {
 The `function` accepts the following `options`:
 *	__token__: Github [access token][github-token].
 *	__username__: Github username.
-* 	__type__: repository [type][github-repos]. Can be one of `all`, `owner`, `member`,  `public` (if provided only a `token`), or `private` (if provided only a `token`). Default: `'all'`.
+* 	__type__: repository [type][github-repos]. Can be one of `all`, `owner`, `member`,  `public, or `private`. The `public` and `private` options are __only__ applicable if the function is provided a `token` and no `username`. Default: `'all'`.
 *	__sort__: method used to sort meta data. Can be one of `full_name`, `created`, `pushed`, or `updated`.
 *	__direction__: sort direction; either `asc` or `desc`.
-*	__visibility__: repository visibility. Can be one of `all`, `public`, or `private`. Applicable if provided __only__ a `token`. Ignored if `type` option is present.
-*	__affiliation__: repository affiliation. A comma-separated list of values, which may include: `owner,collaborator,organization_member`. Applicable if provided __only__ a `token`. Ignored if `type` option is present. 
+*	__visibility__: repository visibility. Can be one of `all`, `public`, or `private`. Applicable if provided a `token` and no `username`. Ignored if `type` option is present.
+*	__affiliation__: repository affiliation. A comma-separated list of values, which may include: `owner,collaborator,organization_member`. Applicable if provided a `token` and no `username`. Ignored if `type` option is present. 
 *	__useragent__: [user agent][github-user-agent] `string`.
 
 To [authenticate][github-oauth2] with Github, set the [`token`][github-token] option.
@@ -112,6 +112,7 @@ The factory method accepts the same `options` as [`repos()`](#repos).
 ## Notes
 
 *	Either a `username` or a [`token`][github-token] or both __must__ be provided. If provided a [`token`][github-token], but not a `username`, the `function` [fetches][github-get] repositories associated with the authenticated user.
+*	If not provided a `token`, the `function` can only return __public__ repository meta data.
 *	[Rate limit][github-rate-limit] information includes the following:
 	-	__limit__: maximum number of requests a consumer is permitted to make per hour.
 	-	__remaining__: number of remaining requests.
