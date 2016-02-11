@@ -48,7 +48,7 @@ function clbk( error, results, info ) {
 The `function` accepts the following `options`:
 *	__token__: Github [access token][github-token].
 *	__username__: Github username.
-* 	__type__: repository [type][github-repos]. Can be one of `all`, `owner`, `member`,  `public`, or `private`. The `public` and `private` options are __only__ applicable if the function is provided a `token` and no `username`. Default: `'all'`.
+* 	__type__: repository [type][github-repos]. Can be one of `all`, `owner`, `member`,  `public`, or `private`. The `public` and `private` options are __only__ applicable if the function is provided a `token` and no `username`.
 *	__sort__: method used to sort meta data. Can be one of `full_name`, `created`, `pushed`, or `updated`.
 *	__direction__: sort direction; either `asc` or `desc`.
 *	__visibility__: repository visibility. Can be one of `all`, `public`, or `private`. Applicable if provided a `token` and no `username`. Ignored if `type` option is present.
