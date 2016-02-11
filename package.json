@@ -1,6 +1,6 @@
 {
   "name": "github-user-repos",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get meta data for repositories associated with a user.",
   "author": {
     "name": "Athan Reines",
